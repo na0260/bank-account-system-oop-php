@@ -2,7 +2,7 @@
 
 namespace classes;
 
-abstract class Account
+abstract class Account implements Transaction
 {
     protected $accountNumber;
     protected $balance;
