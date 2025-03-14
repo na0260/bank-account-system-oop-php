@@ -25,7 +25,7 @@ abstract class Account implements Transaction
     {
         $this->balance += $amount;
         echo "Deposited $amount. New balance: $this->balance" . PHP_EOL;
-        $this->log("Deposited $amount. New balance: $this->balance");
+        $this->log(" Deposited $amount. New balance: $this->balance");
     }
 
     abstract function withdraw($amount);
