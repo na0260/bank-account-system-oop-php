@@ -4,6 +4,7 @@ namespace classes;
 
 abstract class Account implements Transaction
 {
+    use Logger;
     protected $accountNumber;
     protected $balance;
     protected $owner;
@@ -24,6 +25,7 @@ abstract class Account implements Transaction
     {
         $this->balance += $amount;
         echo "Deposited $amount. New balance: $this->balance" . PHP_EOL;
+        $this->log("Deposited $amount. New balance: $this->balance");
     }
 
     abstract function withdraw($amount);
